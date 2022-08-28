@@ -1,0 +1,45 @@
+
+.modal {
+	background: #00000033
+	position: fixed
+	display: flex
+	left: 0
+	right: 0
+	top: 0
+	bottom: 0
+	backdrop-filter: blur(8px)
+	-webkit-backdrop-filter: blur(8px)
+	z-index: 10000
+}
+
+.block {
+	display: flex
+	margin: auto
+	flex-direction: column
+	background: var(--theme-surface)
+	border-radius: var(--theme-round)
+	max-width: 1100px
+	max-height: 80%
+	overflow: hidden
+	transition: inherit
+	transition-timing-function: cubic-bezier(0.25, 3, 0.5, 2)
+}
+
+.content {
+	overflow: auto
+	padding: var(--gap)
+}
+
+.fill {
+	backdrop-filter: none
+	background: var(--theme-background)
+}
+
+.fade {
+	opacity: 0
+
+	& > .block {
+		transform: scale(0.95)
+		transition-timing-function: ease
+	}
+}

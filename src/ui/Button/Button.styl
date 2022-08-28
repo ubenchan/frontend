@@ -1,0 +1,113 @@
+
+.button {
+	display: flex
+	align-items: center
+	justify-content: center
+	border: none
+
+	cursor: pointer
+	user-select: none
+
+	text-decoration: none
+	transition: 0.2s all
+}
+
+.small {
+	padding: 8px
+	border-radius: 8px
+
+	.icon {
+		width: 16px
+		height: 16px
+	}
+
+	.text {
+		font-weight: 700
+		text-transform: uppercase
+		margin: 0 4px
+		font-size: 16px
+		line-height: 1
+	}
+}
+
+.medium {
+	padding: 12px
+	border-radius: 12px
+
+	.icon {
+		width: 18px
+		height: 18px
+	}
+
+	.text {
+		font-weight: 800
+		text-transform: uppercase
+		margin: 0 6px
+		font-size: 18px
+		line-height: 1
+	}
+}
+
+.large {
+	padding: 16px
+	border-radius: 16px
+
+	.icon {
+		width: 24px
+		height: 24px
+	}
+
+	.text {
+		font-weight: 800
+		text-transform: uppercase
+		margin: 0 8px
+		font-size: 24px
+		line-height: 1
+	}
+}
+
+.secondary {
+	color: var(--theme-secondary-text)
+	background: var(--theme-secondary-fill)
+
+	&:hover {
+		color: var(--theme-secondary-text-hover)
+		background: var(--theme-secondary-fill-hover)
+	}
+
+	&:active {
+		color: var(--theme-secondary-text-active)
+		background: var(--theme-secondary-fill-active)
+	}
+}
+
+.outline {
+	background: var(--theme-bg-fill)
+	color: var(--theme-bg-text)
+	box-shadow: 0 0 0 2px currentColor inset
+
+	&:hover {
+		color: var(--theme-bg-text-hover)
+		background: var(--theme-bg-fill-hover)
+	}
+
+	&:active {
+		color: var(--theme-bg-text-active)
+		background: var(--theme-bg-fill-active)
+	}
+}
+
+.primary {
+	color: var(--theme-primary-text)
+	background: var(--theme-primary-fill)
+
+	&:hover {
+		color: var(--theme-primary-text-hover)
+		background: var(--theme-primary-fill-hover)
+	}
+
+	&:active {
+		color: var(--theme-primary-text-active)
+		background: var(--theme-primary-fill-active)
+	}
+}

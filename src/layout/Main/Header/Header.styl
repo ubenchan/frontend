@@ -1,0 +1,24 @@
+.header {
+  display: flex
+  flex-wrap: wrap
+  gap: 7.5vw
+}
+
+
+.example {
+  --width: 400px
+  --height: 204px
+  --scale: 1.75
+  border-radius: 12px
+  pointer-events: none
+
+  min-width: var(--width)
+  margin-left: auto
+  margin-right: calc(var(--width) * (var(--scale) - 1) - 7.5vw - 48px * var(--scale))
+  margin-bottom: calc(var(--height) * (var(--scale) - 1) + 7.5vw)
+
+  transform-origin: left top
+  transform: scale(var(--scale))
+
+  user-select: none
+}

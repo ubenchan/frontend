@@ -1,0 +1,69 @@
+
+* {
+	box-sizing: border-box
+	-webkit-tap-highlight-color: transparent
+}
+
+:root {
+	--theme-green: #9ad638
+	--theme-orange: #ffb74d
+	--theme-red: #ef6950
+
+	// Background
+	--theme-bg-fill: #151515
+	--theme-bg-fill-hover: lighten(#333, 5%)
+	--theme-bg-fill-active: lighten(#333, 10%)
+
+	--theme-bg-text: #fff
+	--theme-bg-text-hover: darken(#fff, 10%)
+	--theme-bg-text-active: darken(#fff, 15%)
+
+	--theme-bg-text_secondary: #aaa
+	--theme-bg-text_secondary-hover: darken(#ccc, 10%)
+	--theme-bg-text_secondary-active: darken(#ccc, 15%)
+
+	--theme-delimiter: #000
+
+	// Surface
+	--theme-surface-fill: #1f1f1f
+	--theme-surface-text: #fff
+	--theme-surface-text-hover: darken(#fff, 10%)
+
+	// Primary
+	--theme-primary-fill: #ef6950
+	--theme-primary-fill-hover: darken(#ef6950, 10%)
+	--theme-primary-fill-active: darken(#ef6950, 15%)
+
+	--theme-primary-text: #fff
+	--theme-primary-text-hover: darken(#fff, 10%)
+	--theme-primary-text-active: darken(#fff, 15%)
+
+	// Secondary
+	--theme-secondary-fill: #555
+	--theme-secondary-text: #fff
+	--theme-secondary-fill-hover: darken(#555, 10%)
+
+	--theme-secondary-text-hover: darken(#fff, 10%)
+	--theme-secondary-fill-active: darken(#555, 15%)
+	--theme-secondary-text-active: darken(#fff, 15%)
+}
+
+html {
+	min-height: 100%
+	background: var(--theme-bg-fill)
+	color: var(--theme-bg-text)
+	display: flex
+	flex-direction: column
+}
+
+body {
+	display: contents
+}
+
+:global(#root) {
+	display: flex
+	flex-direction: column
+	flex: 1
+	overflow-x: hidden
+}
+

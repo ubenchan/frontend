@@ -1,0 +1,5 @@
+export { Layout } from './Layout'
+export { Header } from './Header'
+export { Content } from './Content'
+export { Section } from './Section'
+export { Footer } from './Footer'

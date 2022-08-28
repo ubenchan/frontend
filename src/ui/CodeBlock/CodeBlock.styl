@@ -1,0 +1,19 @@
+.wrapper {
+	background: var(--theme-surface-fill)
+	padding: 0 12px
+	border-radius: 12px
+}
+
+.editor {
+	position: relative
+	user-select: none
+	min-height: 78px
+
+	& > :global(.monaco-editor) {
+		position: absolute
+	}
+
+	:global(.current-line) {
+		border-radius: 3px
+	}
+}

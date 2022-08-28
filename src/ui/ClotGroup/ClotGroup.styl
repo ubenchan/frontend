@@ -1,0 +1,41 @@
+
+$item-round = 4px
+$block-round = 12px
+
+.clot-group {
+	display: flex
+	gap: $item-round
+
+	background: var(--theme-delimiter)
+	box-shadow: 0 0 0 $item-round var(--theme-bg-fill) inset
+
+	> * {
+		border-radius: $item-round
+	}
+}
+
+.row {
+	> :first-child {
+		border-top-left-radius: $block-round
+		border-bottom-left-radius: $block-round
+	}
+
+	> :last-child {
+		border-top-right-radius: $block-round
+		border-bottom-right-radius: $block-round
+	}
+}
+
+.column {
+	flex-direction: column
+
+	> :first-child {
+		border-top-left-radius: $block-round
+		border-top-right-radius: $block-round
+	}
+
+	> :last-child {
+		border-bottom-left-radius: $block-round
+		border-bottom-right-radius: $block-round
+	}
+}

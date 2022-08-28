@@ -1,0 +1,95 @@
+
+.item {
+	position: relative
+	display: grid
+
+	background: var(--theme-surface-fill)
+
+	grid-template-areas: 'indicator stats controls' 'indicator code controls'
+	grid-template-rows: 22px 1fr
+	grid-template-columns: 28px 1fr auto
+}
+
+
+.drag_indicator {
+	grid-area: indicator
+	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	gap: 12px
+	padding: 12px
+	position: relative
+	z-index: 2
+	cursor: grab
+
+	.drag_handle {
+		color: var(--theme-bg-text_secondary)
+		height: 12px
+	}
+
+	&::after {
+		content: ''
+		display: block
+		width: 4px
+		flex: 1
+
+		background: var(--theme-bg-fill)
+		border-radius: 2px
+	}
+}
+
+.stats {
+	grid-area: stats
+	display: flex
+	justify-content: space-between
+	position: relative
+	padding-top: 12px
+
+	z-index: 1
+
+	> * {
+		line-height: 10px
+	}
+}
+
+.running {
+	color: var(--theme-orange)
+}
+
+.fastest {
+	color: var(--theme-green)
+}
+
+.slower {
+	color: var(--theme-red)
+}
+
+.notTested {
+	color: var(--theme-bg-text_secondary)
+}
+
+.ops {
+	position: relative
+	padding: 12px
+
+	z-index: 1
+	line-height: 10px
+}
+
+.code {
+	grid-area: code
+	margin: 0 -12px
+}
+
+.controls {
+	grid-area: controls
+
+	align-self: flex-end
+
+	display: flex
+	flex-direction: column
+	gap: 12px
+
+	padding: 12px
+}
