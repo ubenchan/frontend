@@ -1,7 +1,7 @@
 import cnj from 'cnj'
 import { ComponentProps, FC } from 'react'
 
-import { $group } from './Group.styl'
+import { $group } from './Group.module.styl'
 
 type Props = ComponentProps<'div'>
 

@@ -1,21 +1,16 @@
 import cnj from 'cnj'
-import { languages, editor, KeyCode, KeyMod } from 'monaco-editor'
+import { languages, editor } from 'monaco-editor'
 import { FC, useCallback, useEffect, useRef } from 'react'
 import { ExtendedMonaco, Monaco } from 'ui/Monaco'
 
+import TsWorker from 'monaco-editor/esm/vs/language/typescript/ts.worker?worker'
+
 import theme from './theme'
 
-import { $wrapper, $editor } from './CodeBlock.styl'
+import { $wrapper, $editor } from './CodeBlock.module.styl'
 
 self.MonacoEnvironment = {
-	getWorker() {
-		return new Worker(
-			new URL(
-				'monaco-editor/esm/vs/language/typescript/ts.worker',
-				import.meta.url,
-			),
-		)
-	},
+	getWorker: () => new TsWorker(),
 }
 
 editor.defineTheme('monokai', theme)

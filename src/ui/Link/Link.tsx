@@ -2,7 +2,7 @@ import cnj from 'cnj'
 import { FC, HTMLAttributeAnchorTarget, ReactNode, useMemo } from 'react'
 import { NavLink } from 'react-router-dom'
 
-import { $link, $current } from './Link.styl'
+import { $link, $current } from './Link.module.styl'
 
 type Props = {
 	href: string

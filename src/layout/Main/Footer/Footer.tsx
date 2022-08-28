@@ -7,8 +7,9 @@ import Logo from 'icon/Logo.svg'
 import Browse from 'icon/Browse.svg'
 import Create from 'icon/Create.svg'
 
-import { $footer, $controls, $title, $logo } from './Footer.styl'
 import { Icon } from 'ui/Icon'
+
+import { $footer, $controls, $title, $logo } from './Footer.module.styl'
 
 export const Footer = () => {
 	return (

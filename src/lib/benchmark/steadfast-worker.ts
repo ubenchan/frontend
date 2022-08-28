@@ -4,7 +4,7 @@ export class SteadfastWorker extends EventTarget {
 	private current!: Worker
 	private id = 0
 
-	constructor(public scriptURL: string | URL) {
+	constructor(public creator: () => Worker) {
 		super()
 		this.restart()
 	}
@@ -12,7 +12,7 @@ export class SteadfastWorker extends EventTarget {
 	restart() {
 		this.current?.terminate()
 
-		this.current = new Worker(this.scriptURL)
+		this.current = this.creator()
 		this.current.onmessage = (e) => {
 			this.dispatchEvent(new MessageEvent('message', e as any))
 		}

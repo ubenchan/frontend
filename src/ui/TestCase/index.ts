@@ -1,1 +1,2 @@
-export { TestCase, State } from './TestCase'
+export { TestCase } from './TestCase'
+export type { State } from './TestCase'

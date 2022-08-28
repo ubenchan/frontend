@@ -21,7 +21,9 @@ export type CompiledBench = {
 	maxTime?: number
 }
 
-export const worker = new SteadfastWorker(new URL('./worker', import.meta.url))
+export const worker = new SteadfastWorker(
+	() => new Worker(new URL('./worker?worker', import.meta.url)),
+)
 
 export enum Inner {
 	ShouldReturn = 'INNER_BENCHMARK_SHOULD_RETURN',

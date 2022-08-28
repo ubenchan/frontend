@@ -14,7 +14,7 @@ import { useFilter } from 'lib/sotore'
 import { runAllTests, stopAllTests, suite } from 'model/suite'
 import { Modal } from 'ui/Modal'
 
-import { $header, $logo, $title, $controls } from './Header.styl'
+import { $header, $logo, $title, $controls } from './Header.module.styl'
 
 export const Header: FC = () => {
 	const [title, author, running] = useFilter(

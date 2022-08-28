@@ -16,7 +16,7 @@ import {
 	$secondary,
 	$primary,
 	$outline,
-} from './Button.styl'
+} from './Button.module.styl'
 import Symbol from '.svg'
 import { Icon } from 'ui/Icon'
 

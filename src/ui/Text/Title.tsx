@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 
-import { $title } from './Title.styl'
+import { $title } from './Title.module.styl'
 
 const sizes = {
 	large: 'h1',

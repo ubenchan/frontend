@@ -1,6 +1,12 @@
 import { cnj } from 'cnj'
 import { FC, ReactNode } from 'react'
-import { $text, $bold, $uppercase, $error, $secondary } from './Text.styl'
+import {
+	$text,
+	$bold,
+	$uppercase,
+	$error,
+	$secondary,
+} from './Text.module.styl'
 
 const types = {
 	error: $error,

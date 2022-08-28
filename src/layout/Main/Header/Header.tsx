@@ -3,7 +3,7 @@ import { FC, ReactNode } from 'react'
 import { TestCases } from 'ui/TestCases'
 import { Title } from 'ui/Text'
 
-import { $header, $example } from './Header.styl'
+import { $header, $example } from './Header.module.styl'
 
 type Props = {
 	children: ReactNode

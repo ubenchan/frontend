@@ -1,10 +1,10 @@
-import { $modal, $fade, $block, $content, $fill } from './Modal.styl'
-
 import { Text, Title } from 'ui/Text'
 
 import { Mote, withMote } from 'lib/mote'
 import { MouseEvent, ReactNode } from 'react'
 import cnj from 'cnj'
+
+import { $modal, $fade, $block, $content, $fill } from './Modal.module.styl'
 
 type Props = {
 	fill?: boolean

@@ -8,7 +8,7 @@ import { Landing } from 'page/Landing'
 import { NotFound } from 'page/NotFound'
 import { UnderConstruction } from 'page/UnderConstruction'
 
-import './App.styl'
+import './App.module.styl'
 
 const routes: RouteObject[] = [
 	{ path: '/', element: <Landing /> },

@@ -3,7 +3,7 @@ import { After } from './After'
 import { Tests } from './Tests'
 import { Before } from './Before'
 
-import { $content } from './Content.styl'
+import { $content } from './Content.module.styl'
 
 export const Content: FC = () => {
 	return (

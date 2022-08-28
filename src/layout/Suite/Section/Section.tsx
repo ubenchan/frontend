@@ -2,7 +2,7 @@ import { FC, ReactNode, useMemo } from 'react'
 import { Group } from 'ui/Group'
 import { Title } from 'ui/Text'
 
-import { $header } from './Section.styl'
+import { $header } from './Section.module.styl'
 
 type Props = {
 	title: string

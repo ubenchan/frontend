@@ -1,8 +1,8 @@
 import { withId } from 'lib/withId'
 import { Test } from 'model/suite'
-import { useMemo } from 'react'
+import { lazy, useMemo } from 'react'
 import { ClotGroup } from 'ui/ClotGroup'
-import { TestCase, State } from 'ui/TestCase'
+import { State } from 'ui/TestCase'
 
 type Props = {
 	onChange?(id: string, value: string): void
@@ -13,7 +13,9 @@ type Props = {
 	className?: string
 }
 
-const WrappedTestCase = withId(TestCase)
+const WrappedTestCase = withId(
+	lazy(async () => ({ default: (await import('ui/TestCase')).TestCase })),
+)
 
 export const TestCases = (props: Props) => {
 	const { tests, className, onChange, onRemove, onRun, onStop } = props

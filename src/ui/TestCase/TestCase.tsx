@@ -21,7 +21,7 @@ import {
 	$notTested,
 	$controls,
 	$code,
-} from './TestCase.styl'
+} from './TestCase.module.styl'
 
 const stateMap = {
 	running: $running,

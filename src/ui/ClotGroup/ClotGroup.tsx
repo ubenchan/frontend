@@ -1,7 +1,7 @@
 import cnj from 'cnj'
 import { ComponentProps, FC } from 'react'
 
-import { $clot_group, $row, $column } from './ClotGroup.styl'
+import { $clot_group, $row, $column } from './ClotGroup.module.styl'
 
 type Props = ComponentProps<'div'> & {
 	column?: boolean

@@ -1,13 +1,9 @@
 declare module '*.styl'
 declare module '*.css'
 
-declare module '*.svg' {
-	const res: {
-		id: string
-		url: string
-		viewBox: string
-		toString(): string
-	}
+declare module 'monaco-editor/*'
 
+declare module '*.svg' {
+	const res: string
 	export default res
 }

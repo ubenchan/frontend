@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { Text } from 'ui/Text'
-import { $footer } from './Footer.styl'
+import { $footer } from './Footer.module.styl'
 
 export const Footer: FC = () => {
 	return (

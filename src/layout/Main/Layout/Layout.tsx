@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import { $layout } from './Layout.styl'
+import { $layout } from './Layout.module.styl'
 
 type Props = {
 	children: ReactNode
