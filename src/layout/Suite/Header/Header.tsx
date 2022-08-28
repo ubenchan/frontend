@@ -35,7 +35,7 @@ export const Header: FC = () => {
 				.catch((e) => e)
 			await navigator.clipboard.writeText(url)
 		} catch (e) {
-			window.prompt('Brouwser is not supporting, copy manually:', url)
+			window.prompt('Browser is not supporting, copy manually:', url)
 		}
 
 		clearTimeout(shareModalTimerRef.current)
