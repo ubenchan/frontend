@@ -1,0 +1,1 @@
+(function(){"use strict";addEventListener("message",async({data:[e,n]})=>{try{let t=Function("count",`return (${n.compiled})(count)`);postMessage([e,await t(n.count)])}catch(t){postMessage([e,t])}})})();
