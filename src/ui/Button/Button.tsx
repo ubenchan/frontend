@@ -1,10 +1,9 @@
-// import Icon from 'ui/Icon'
-
 import { cnj } from 'cnj'
-import { Link } from 'react-router-dom'
-import { ComponentType, ElementType, FC, MouseEvent } from 'react'
+import { ElementType, FC, MouseEvent } from 'react'
 
 import { Text } from 'ui/Text'
+import { Icon } from 'ui/Icon'
+import { Link } from 'ui/Link'
 
 import {
 	$button,
@@ -13,12 +12,11 @@ import {
 	$small,
 	$medium,
 	$large,
+	$link,
 	$secondary,
 	$primary,
 	$outline,
 } from './Button.module.styl'
-import Symbol from '.svg'
-import { Icon } from 'ui/Icon'
 
 const sizes = {
 	small: $small,
@@ -30,12 +28,13 @@ const types = {
 	primary: $primary,
 	secondary: $secondary,
 	outline: $outline,
+	link: $link,
 }
 
 type Props = {
 	children?: string
 	href?: string
-	icon?: typeof Symbol
+	icon?: string
 	size?: keyof typeof sizes
 	type?: keyof typeof types
 	onClick?(e: MouseEvent<HTMLButtonElement>): void
@@ -52,7 +51,7 @@ export const Button: FC<Props> = (props) => {
 	)
 
 	return (
-		<Tag className={className} to={href} onClick={onClick}>
+		<Tag className={className} href={href} onClick={onClick}>
 			{icon && <Icon symbol={icon} className={$icon} />}
 			{children && <Text className={$text}>{children}</Text>}
 		</Tag>

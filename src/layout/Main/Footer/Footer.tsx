@@ -6,6 +6,7 @@ import { Text, Title } from 'ui/Text'
 import Logo from 'icon/Logo.svg'
 import Browse from 'icon/Browse.svg'
 import Create from 'icon/Create.svg'
+import GitHub from 'icon/GitHub.svg'
 
 import { Icon } from 'ui/Icon'
 
@@ -20,6 +21,14 @@ export const Footer = () => {
 				</Button>
 				<Button size="large" type="outline" href="/browse" icon={Browse}>
 					browse
+				</Button>
+				<Button
+					size="large"
+					type="link"
+					href="https://github.com/ubenchan/frontend"
+					icon={GitHub}
+				>
+					source
 				</Button>
 			</Group>
 
