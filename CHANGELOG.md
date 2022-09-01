@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/ubenchan/frontend/compare/v1.0.0...v1.1.0) (2022-09-01)
+
+
+### Features
+
+* GitHub link ([0eae3ba](https://github.com/ubenchan/frontend/commit/0eae3ba7b8c3fd63193237b43f1c351677b8eb17))
+
 ## 1.0.0 (2022-08-29)
 
 
