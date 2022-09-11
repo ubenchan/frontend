@@ -15,6 +15,7 @@ import { runAllTests, stopAllTests, suite } from 'model/suite'
 import { Modal } from 'ui/Modal'
 
 import { $header, $logo, $title, $controls } from './Header.module.styl'
+import { SettingsModal } from './SettingsModal'
 
 export const Header: FC = () => {
 	const [title, author, running] = useFilter(
@@ -24,6 +25,7 @@ export const Header: FC = () => {
 		'running',
 	)
 	const [shareModalVisible, setShareModalVisible] = useState(false)
+	const [configModalVisible, setConfigModalVisible] = useState(false)
 	const shareModalTimerRef = useRef<NodeJS.Timeout | string | number>()
 
 	const handleShare = useCallback(async () => {
@@ -46,6 +48,10 @@ export const Header: FC = () => {
 		}, 1000)
 	}, [])
 
+	const handleConfig = useCallback(() => {
+		setConfigModalVisible(true)
+	}, [])
+
 	return (
 		<header className={$header}>
 			<Link href="/">
@@ -60,7 +66,7 @@ export const Header: FC = () => {
 
 			<ClotGroup className={$controls}>
 				<Button icon={Share} onClick={handleShare} />
-				<Button icon={Settings} />
+				<Button icon={Settings} onClick={handleConfig} />
 				{running ? (
 					<Button icon={Stop} type="primary" onClick={stopAllTests}>
 						stop
@@ -72,7 +78,13 @@ export const Header: FC = () => {
 				)}
 			</ClotGroup>
 
-			<Modal title="Copied!" name="share" visible={shareModalVisible} />
+			<SettingsModal
+				visible={configModalVisible}
+				onDismiss={setConfigModalVisible}
+			/>
+			<Modal name="suite_share" visible={shareModalVisible}>
+				<Title size="small">Copied!</Title>
+			</Modal>
 		</header>
 	)
 }

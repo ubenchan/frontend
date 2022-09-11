@@ -1,0 +1,25 @@
+
+.text-field {
+	display: inline-grid
+	align-items: center
+}
+
+.text-field::after {
+	content: attr(data-value) " "
+	min-width: 0
+	visibility: hidden
+}
+
+.input, .text-field::after {
+	height: 32px
+	padding: 8px
+	font: inherit
+	white-space: pre
+	grid-area: 1/1
+}
+
+.input {
+	width: 100%
+	border: none
+	border-radius: 8px
+}

@@ -1,5 +1,5 @@
-declare module '*.styl'
-declare module '*.css'
+declare module '*.module.styl'
+declare module '*.module.css'
 
 declare module 'monaco-editor/*'
 
